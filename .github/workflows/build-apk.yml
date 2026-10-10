@@ -8,6 +8,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -30,3 +32,11 @@ jobs:
         with:
           name: AppRecord-35-apk
           path: AppRecord-35/AppRecord-35-debug.apk
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-${{ github.run_number }}
+          name: AppRecord-35 build ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          files: AppRecord-35/AppRecord-35-debug.apk
+          prerelease: true
