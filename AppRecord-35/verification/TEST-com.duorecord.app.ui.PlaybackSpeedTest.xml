@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.app.ui.PlaybackSpeedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-10T07:56:56" hostname="691556d84be3" time="0.274">
+  <properties/>
+  <testcase name="nativePlaybackEngineSupportsThirtyTimesPauseAndAudioTrackRestoration" classname="com.duorecord.app.ui.PlaybackSpeedTest" time="0.274"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[android.os.ServiceManager$ServiceNotFoundException: No service published for: media_metrics
+	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:203)
+	at android.app.SystemServiceRegistry$131.createService(SystemServiceRegistry.java:1577)
+	at android.app.SystemServiceRegistry$131.createService(SystemServiceRegistry.java:1572)
+	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:2231)
+	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1812)
+	at android.app.ContextImpl.getSystemService(ContextImpl.java:2241)
+	at jdk.internal.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.robolectric.shadows.ShadowContextImpl$_ContextImpl_$$Reflector73.getSystemService(Unknown Source)
+	at org.robolectric.shadows.ShadowContextImpl.getSystemService(ShadowContextImpl.java:84)
+	at android.app.ContextImpl.getSystemService(ContextImpl.java)
+	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:936)
+	at androidx.media3.exoplayer.analytics.MediaMetricsListener.create(MediaMetricsListener.java:104)
+	at androidx.media3.exoplayer.ExoPlayerImpl$Api31.registerMediaMetricsListener(ExoPlayerImpl.java:3406)
+	at androidx.media3.exoplayer.ExoPlayerImpl.<init>(ExoPlayerImpl.java:354)
+	at androidx.media3.exoplayer.ExoPlayer$Builder.build(ExoPlayer.java:1353)
+	at com.duorecord.player.NativePlayer.makePlayer(PlaybackFeature.kt:41)
+	at com.duorecord.player.NativePlayer.<init>(PlaybackFeature.kt:28)
+	at com.duorecord.player.PlaybackFeature.create(PlaybackFeature.kt:19)
+	at com.duorecord.app.ui.PlaybackSpeedTest.nativePlaybackEngineSupportsThirtyTimesPauseAndAudioTrackRestoration(PlaybackSpeedTest.kt:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+]]></system-err>
+</testsuite>

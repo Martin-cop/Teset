@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.domain.MicrophoneContinuityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-09T10:43:47" hostname="691556d84be3" time="0.004">
+  <properties/>
+  <testcase name="silencedVideoEncodesSilenceAndRestoresWithoutRequestingAStop" classname="com.duorecord.domain.MicrophoneContinuityTest" time="0.001"/>
+  <testcase name="audioOnlyOrStrictVideoRequestsPauseWhenAndroidSilencesInput" classname="com.duorecord.domain.MicrophoneContinuityTest" time="0.0"/>
+  <testcase name="aMissingConfigurationCannotFalselyConfirmMicrophoneRecovery" classname="com.duorecord.domain.MicrophoneContinuityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

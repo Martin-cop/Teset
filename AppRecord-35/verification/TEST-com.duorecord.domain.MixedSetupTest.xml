@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.domain.MixedSetupTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-09T10:43:47" hostname="691556d84be3" time="0.008">
+  <properties/>
+  <testcase name="defaultPresentationStartsTopLeftAndReadingSavedLayoutPreservesUserPlacement" classname="com.duorecord.domain.MixedSetupTest" time="0.001"/>
+  <testcase name="choosingScreenBackgroundEnablesItEvenWhenItWasNotPreviouslySelected" classname="com.duorecord.domain.MixedSetupTest" time="0.004"/>
+  <testcase name="quickPresentationRestoresVisibleCameraInsetsButKeepsUserSoundAndDuration" classname="com.duorecord.domain.MixedSetupTest" time="0.0"/>
+  <testcase name="sourceRemovalNeverLeavesAnAbsentBackgroundOrAnEmptyCapture" classname="com.duorecord.domain.MixedSetupTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

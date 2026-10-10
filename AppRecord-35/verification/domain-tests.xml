@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.domain.PolicyTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-09T10:43:47" hostname="691556d84be3" time="0.012">
+  <properties/>
+  <testcase name="ignoresWritingFiles" classname="com.duorecord.domain.PolicyTest" time="0.003"/>
+  <testcase name="refusesUnrecordedGap" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="protectedCopyCanFillDeletedOriginal" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="cameraSpecificCopiesFillTheirOwnTimeline" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="rearExportDoesNotSwitchToFrontWhenRearGapOccurs" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="refusesInvertedTimes" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="savedQuotaRotatesOldestProtectedFilesOnly" classname="com.duorecord.domain.PolicyTest" time="0.004"/>
+  <testcase name="savedQuotaRefusesOversizeVideo" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="rejectsMixedCameraTimeline" classname="com.duorecord.domain.PolicyTest" time="0.001"/>
+  <testcase name="retentionRemovesOnlyEnoughOldFiles" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="removingProtectedTagReturnsFileToRollingPolicy" classname="com.duorecord.domain.PolicyTest" time="0.001"/>
+  <testcase name="retentionKeepsQuotaAndFreeSpaceWhenAlreadySatisfied" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="extractsAcrossBoundariesWithoutDuplicateProtectedCopy" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="savedQuotaSkipsPinnedAndWritingFiles" classname="com.duorecord.domain.PolicyTest" time="0.001"/>
+  <testcase name="retentionNeverDeletesProtectedOrActiveOrPinned" classname="com.duorecord.domain.PolicyTest" time="0.0"/>
+  <testcase name="refusesMissingEnd" classname="com.duorecord.domain.PolicyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

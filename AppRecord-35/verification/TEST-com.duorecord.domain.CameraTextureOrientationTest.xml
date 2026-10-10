@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.domain.CameraTextureOrientationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-09T10:43:47" hostname="691556d84be3" time="0.002">
+  <properties/>
+  <testcase name="unknownOrLargeVideoCannotAllocateThumbnailDecoders" classname="com.duorecord.domain.CameraTextureOrientationTest" time="0.001"/>
+  <testcase name="normalCropFlipAndNegativeSensorAnglesRemainStable" classname="com.duorecord.domain.CameraTextureOrientationTest" time="0.0"/>
+  <testcase name="producerQuarterTurnsDoNotDoubleRotatePortraitCameraFrames" classname="com.duorecord.domain.CameraTextureOrientationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

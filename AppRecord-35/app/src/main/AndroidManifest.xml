@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.concurrent" android:required="false" />
+    <queries>
+        <intent><action android:name="android.intent.action.VIEW" /><data android:mimeType="vnd.android.document/root" /></intent>
+        <intent><action android:name="android.intent.action.VIEW" /><data android:mimeType="vnd.android.document/directory" /></intent>
+    </queries>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application android:name=".DuoApp" android:label="${appLabel}" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher"
+        android:allowBackup="false" android:supportsRtl="true" android:theme="@style/AppTheme"
+        android:enableOnBackInvokedCallback="false">
+        <activity android:name=".ui.MainActivity" android:exported="true" android:screenOrientation="portrait" android:launchMode="singleTop">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <receiver android:name=".ScheduleReceiver" android:exported="false" />
+        <service android:name=".RecordTile" android:exported="true" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:label="DuoRecord" android:icon="@drawable/ic_record"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter></service>
+        <service android:name=".RecordingService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="camera|microphone|mediaProjection" />
+        <service android:name=".ExportService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="mediaProcessing|dataSync" />
+    </application>
+</manifest>

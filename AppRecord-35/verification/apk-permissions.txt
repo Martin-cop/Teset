@@ -1,0 +1,16 @@
+package: com.duorecord.app.preview
+uses-permission: name='android.permission.CAMERA'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.POST_NOTIFICATIONS'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_CAMERA'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_MICROPHONE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_DATA_SYNC'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.SCHEDULE_EXACT_ALARM'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+permission: com.duorecord.app.preview.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='com.duorecord.app.preview.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

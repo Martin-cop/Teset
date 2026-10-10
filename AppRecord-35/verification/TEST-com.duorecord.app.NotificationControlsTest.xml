@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.app.NotificationControlsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-10T07:56:38" hostname="691556d84be3" time="0.096">
+  <properties/>
+  <testcase name="notificationChoiceMigratesOldFloatingDefaultOnceAndKeepsLaterManualChoices" classname="com.duorecord.app.NotificationControlsTest" time="0.032"/>
+  <testcase name="disabledNotificationPermissionOrChannelCannotLeaveScreenWithoutControls" classname="com.duorecord.app.NotificationControlsTest" time="0.024"/>
+  <testcase name="notificationPauseResumeStopAndChronometerFollowActualCaptureState" classname="com.duorecord.app.NotificationControlsTest" time="0.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

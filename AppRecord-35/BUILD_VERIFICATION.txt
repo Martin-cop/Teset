@@ -1,0 +1,30 @@
+AppRecord-35 / versionName 1.3.34-AppRecord-35 / versionCode 40 / 2026-10-10
+Installable package: com.duorecord.app.preview / label AppRecord 35 / development signed
+Unsigned release package: com.duorecord.app (original production key unavailable)
+Build: :domain:test :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease :app:lintRelease -> BUILD SUCCESSFUL
+Tests: 77 domain + 149 Robolectric app = 226 passed; no failures/errors/skips.
+Lint: 0 errors/fatal; 132 warnings.
+APK signature verified, same Preview development certificate as AppRecord-34; 4-byte ZIP alignment passed.
+APK SHA-256: 40f020dd2f80ed3e5cb075cee7a6a4140fa16e14f349041196654c9bd274e447
+
+AppRecord-35 current changes:
+Expanded battery details for public Android readings: presence, chemistry, status, temperature, health, raw level/scale, cycle count and charging status where available, remaining charge, signed current/average/power, measured versus estimated energy, estimated time to full, battery saver and thermal status. Unsupported sensors explicitly unavailable; no charger rating inference. Yellow available/green selected Home mode icons; yellow armed Schedule. Signed history columns with missing samples left unmeasured and averaged time bins for readability. Charger visible height matches number frame, cable to rightmost cell; 24dp number top insets and equal body/tube gaps. Matching tiny upper-right mAh/Wh units, centered capacity composite. Removed previously requested white percent underlight. Battery detail/unit/gap/column regression tests and native fixtures. No phone testing.
+
+Retained AppRecord-34 changes:
+Cell-edge cable with one aligned bend; single-line unitless energy and flexible padded frames; no yellow plot border. Audio second in Home. Camera preselection separated from Record, monitor-only status border, white/gray/yellow/green states, independent red Record/green Play glyphs. Front-camera 180-degree correction affects preview and encoded frames; needs phone validation. Pending explicit seeks override ended-player replay; added camera/frame/numeric tests and audio-seek regression coverage.
+
+Retained AppRecord-34 changes:
+Direct triple-width charging cable with red dashes, shorter plug pins, taller matched reading frames; single-close header-free power charts with yellow border/red text; yellow/green mode buttons; active green camera frames; photo swipe navigation and broad Home swipe dispatch. Existing tests rerun; no physical phone testing.
+
+Verification:
+New tests cover monotonic active clock excluding startup/pause/recovery/stop, 2444-file selection independent of the visible 100-file limit, mAh/Wh numerical units and temperature toggles, history retention/missing readings, quiet-spectrum visual gain while preserving real dBFS, temperature warning re-arm policy and Home monitor swipe navigation. Existing media/view/window/service/storage tests pass after updating superseded UI expectations. Camera texture tests now include producer 180-degree rotation with crop and mirror. Native Android View fixtures show charging cable/number frames, quiet spectrum, history chart, equal-square shared playback controls and Home layout. Fixtures are not physical phone screenshots.
+
+Behavior:
+Default recent archive count is 100; full selection performs a background reconcile. Active recording counter is shared by Audio/Screen Home and the floating toolbar. Photo interval includes capture duration. Capacities are estimates in mAh, energy in Wh, power in W; unsupported data shows a dash. Battery histories retain at most 2161 samples/six hours while app or service runs. 45C is an application warning, not a manufacturer limit; it re-arms after cooling to 42C. Foreground opens thermometer; background defers the page until app returns. Charging cable and body fill are animations of connection, not measurements of individual electrons or charger rating.
+
+Screen controls and limits:
+Floating transport is one transparent white frame with counter, Pause/Resume and Stop, no header/help/close. Settings Screen floating controls OFF selects notification Pause/Resume/Stop with no floating window or floating mask. Default is notification controls; the former floating default is migrated once. Notification permission and channel availability are checked before capture. Active notification chronometer pauses with recording, and notification Stop opens finalized playback. Three new tests cover migration, notification actions/clock and permission/channel availability. Android FLAG_SECURE protects controls but can black-mask their area; clean exclusion revealing underlying pixels is NOT promised. Notification shade itself, if opened, is part of screen capture. Screen consent, mandatory foreground notification and privacy indicators remain. Stop waits for output finalization before attempting completed-file playback.
+
+Hardware/public release:
+No physical phone/emulator connected. Actual front-camera upright output, long recording, thermal beep, charging sensor accuracy, MediaProjection masks/concurrency, background playback return and real codec/trim performance require device validation. Preview is NOT a production-ready Play Store release; original production key is unavailable, target/policy/privacy compliance and multi-device testing remain.
+Design: design/UI Neon.md; permanent equal margins/title strips/Guide-Close rules in AGENTS.md, with explicit floating-toolbar exception.

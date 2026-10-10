@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.duorecord.domain.ShortcutGestureTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-09T10:43:47" hostname="691556d84be3" time="0.003">
+  <properties/>
+  <testcase name="combinationsRequireHoldAndValuesAreValidatedBeforeSaving" classname="com.duorecord.domain.ShortcutGestureTest" time="0.001"/>
+  <testcase name="autorepeatIsNotThreePressesAndTwoSecondWindowExpires" classname="com.duorecord.domain.ShortcutGestureTest" time="0.0"/>
+  <testcase name="disabledShortcutAndUnselectedKeysNeverTrigger" classname="com.duorecord.domain.ShortcutGestureTest" time="0.001"/>
+  <testcase name="firedHoldCannotRepeatUntilAllKeysAreReleased" classname="com.duorecord.domain.ShortcutGestureTest" time="0.0"/>
+  <testcase name="releasingEitherKeyEarlyCancelsTheCombination" classname="com.duorecord.domain.ShortcutGestureTest" time="0.0"/>
+  <testcase name="resetOnLostFocusCancelsPendingHoldAndPresses" classname="com.duorecord.domain.ShortcutGestureTest" time="0.001"/>
+  <testcase name="bothSelectedKeysMustBeHeldForTheWholeDuration" classname="com.duorecord.domain.ShortcutGestureTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
