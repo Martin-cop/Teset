@@ -19,6 +19,7 @@ val temperature = GaugeView(context).apply {
     fraction = 37.5f / 60f
 }
 val timer = ElapsedCounterView(context).apply { elapsedMs = 90_000 }
+val speedometer = SpeedometerView(context).apply { speed = 60f }
 ```
 
 `GaugeDrawing.draw` exposes Canvas geometry for compact/expanded custom layouts.
@@ -39,3 +40,14 @@ The audio spectrum/counter use green borders. AnalogPowerView reserves 6dp for i
 
 
 AppRecord 30 adds `HistoryChartView` for nullable timestamped measurements. `AudioSpectrumView.displayAmplitude` is a visual-only gain curve: actual dBFS/PCM/clipping remain unmodified. `AnalogPowerView` uses concealed yellow illumination on all four sides. The app's `CaptureClock` uses monotonic active time and is shared by counter wrappers. No sensor simulation is used for unavailable values.
+
+`SpeedometerView` draws the old-car dial in `res/drawable-nodpi/speedometer_dial.webp` with the needle pivoted on the dial's own hub; the hub cap is redrawn over the needle root. `speed` (km/h, clamped 0..100) swings the needle with a damped spring (about 3% overshoot) onto stop pins at 0 and 100; `snapTo` moves it at once. The printed scale is uneven, so angles interpolate the 21 ticks measured on the dial (`angleFor`). `needle = Needle.VECTOR` (default) draws a sharp path in the colours of the supplied needle; `Needle.IMAGE` draws `speedometer_needle.png`, which is 100×99 px and looks soft when enlarged about 12×. With `wrap_content` height it keeps the dial's 1248:1228 aspect; it can also be inflated from XML.
+
+```kotlin
+seekBar.max = SpeedometerView.MAX_SPEED.toInt()
+seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+    override fun onProgressChanged(bar: SeekBar, value: Int, fromUser: Boolean) { speedometer.speed = value.toFloat() }
+    override fun onStartTrackingTouch(bar: SeekBar) {}
+    override fun onStopTrackingTouch(bar: SeekBar) {}
+})
+```
