@@ -24,6 +24,10 @@
         <activity android:name=".ui.MainActivity" android:exported="true" android:screenOrientation="portrait" android:launchMode="singleTop">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
         </activity>
+        <activity android:name=".ui.SpeedometerDemoActivity" android:exported="true" android:label="Speedometer" android:icon="@mipmap/ic_speedometer" android:roundIcon="@mipmap/ic_speedometer"
+            android:screenOrientation="portrait" android:taskAffinity="${applicationId}.speedometer">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
         <receiver android:name=".ScheduleReceiver" android:exported="false" />
         <service android:name=".RecordTile" android:exported="true" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:label="DuoRecord" android:icon="@drawable/ic_record"><intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter></service>
         <service android:name=".RecordingService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="camera|microphone|mediaProjection" />
